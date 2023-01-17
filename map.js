@@ -6,12 +6,14 @@ const arrayTest = ['1','2','3'];
 
 
 const scores = [
-    {name : 'hong' , score : 100},
-    {name : 'kim' , score : 60},
-    {name : 'seo' , score : 90},
-    {name : 'lee' , score : 80},
-    {name : 'jung' , score : 40},
-    {name : 'han' , score : 50}
+    {name: '지영', score: 80, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '효원', score: 50, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '정기', score: 60, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '대신', score: 30, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '택환', score: 94, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '호승', score: 30, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '희선', score: 23, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
+    {name: '설인', score: 56, mbti: 'INFP', addr: "지구 어딘가 ", contact: "010-1234-1234"},
 ]
 
 //배열로 return
@@ -36,6 +38,9 @@ const mapResult = scores.map(score=>({
 let getName = scores.map(name=>({
     name:name.name
 }))
+//배열에서 40점 미만 점수 받은 자 구하기
+const studentarr = scores.filter(score=>score.score<40);
 
-
-console.log(getName);
+//가장 공부를 잘했던 “지영” 의 점수 확인
+const findstudent = scores.find(score=>score.name==='지영').score;
+console.log(findstudent);
