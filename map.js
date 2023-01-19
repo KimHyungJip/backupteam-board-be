@@ -43,4 +43,5 @@ const studentarr = scores.filter(score=>score.score<40);
 
 //가장 공부를 잘했던 “지영” 의 점수 확인
 const findstudent = scores.find(score=>score.name==='지영').score;
+
 console.log(findstudent);
